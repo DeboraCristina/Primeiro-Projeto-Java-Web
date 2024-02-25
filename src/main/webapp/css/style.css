@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #34495E;
+    background-image: linear-gradient(180deg, #4E387E, #34495E);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+p {
+    color: white;
+    font-size: 14pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 0px black;
+}
+
+h1, h2, h3, h4 {
+    color: #372991;
+    margin: 0 0 10px 0;
+}
+
+.erro {
+    color: tomato;
+}
+
+main {
+    text-align: center;
+
+    background-color: #BDC3C7;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+main div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main div input[type=text], [type=number], select {
+    flex: 1;
+}
+
+main div textarea {
+    width: 100%;
+}
+
+label {
+    min-width: 80px;
+    width: fit-content;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 8px 10px;
+
+    background-color: #dae1e6;
+    color: white;
+
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 8px 0;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+header{
+    padding: 10px 20px;
+    margin: 8px 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #34495e75;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12pt;
+    padding: 3px 8px;
+    
+    border: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom-color: #4CAF50;
+}
+
+header a:hover {
+    color: #ccc;
+    border-bottom-color: #377e39;
+}
+
+
+
+.tabela_container {
+    display: block;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+table th, table td {
+    border: 1px solid #ddd;
+    text-align: right;
+}
+
+table th {
+    text-align: center;
+    border: 1px solid #c5c5c5;
+    background-color: rgba(55, 41, 145, 0.2);
+}
+
