@@ -73,7 +73,7 @@ input[type=text], [type=number], select, input[type=date], input[type=date], inp
     margin: 8px 10px;
 
     background-color: #dae1e6;
-    color: white;
+    color: black;
 
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -154,3 +154,21 @@ table th {
     background-color: rgba(55, 41, 145, 0.2);
 }
 
+*::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #a2a4bc; /* Cor da alça (barra de rolagem) */
+    border-radius: 6px; /* Borda arredondada da alça */
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #ffffff00; /* Cor do fundo da barra de rolagem */
+}
+
+/* Estilos para Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #a2a4bc #ffffff00;
+}

@@ -8,8 +8,8 @@
 <body>
     <header>
         <a href="index.jsp">Home</a>
-        <a href="professor.jsp">Professor</a>
-        <a href="disciplina.jsp">Disciplina</a>
+        <a href="${pageContext.request.contextPath}/professor">Professor</a>
+        <a href="${pageContext.request.contextPath}/disciplina">Disciplina</a>
     </header>
 </body>
 </html>

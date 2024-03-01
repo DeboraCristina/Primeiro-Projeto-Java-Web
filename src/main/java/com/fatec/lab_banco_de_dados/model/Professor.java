@@ -19,6 +19,6 @@ public class Professor
     @Override
     public String toString()
     {
-        return ("Nome: " + this.nome);
+        return (this.nome);
     }
 }
