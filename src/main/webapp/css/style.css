@@ -14,12 +14,6 @@ body {
     background-attachment: fixed;
 }
 
-p {
-    color: white;
-    font-size: 14pt;
-    font-family: 'Courier New', Courier, monospace;
-}
-
 .titulo {
     color: white;
     text-align: center;
@@ -48,18 +42,21 @@ main {
     margin-right: 8%;
 }
 
+p {
+    color: white;
+    font-size: 14pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 main div {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
 }
 
 main div input[type=text], [type=number], select {
     flex: 1;
-}
-
-main div textarea {
-    width: 100%;
 }
 
 label {
@@ -83,25 +80,20 @@ input[type=text], [type=number], select, input[type=date], input[type=date], inp
     box-sizing: border-box;
 }
 
-textarea {
-    padding: 10px 20px;
-    font-size: 1em;
-    margin: 8px 0;
-
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
 input[type=submit] {
     background-color: #4CAF50;
     font-size: 1em;
     color: white;
     padding: 10px 20px;
-    margin: 5px 0;
+    margin: 5px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
+    width: 100%;
+}
+input[type=submit]#buscar {
+    width: 20%;
 }
   
 input[type=submit]:hover {
@@ -140,11 +132,9 @@ header a:hover {
     border-bottom-color: #377e39;
 }
 
-
-
 .tabela_container {
     display: block;
-    max-height: 150px;
+    height: 150px;
     overflow-y: auto;
     width: 100%;
     border-collapse: collapse;

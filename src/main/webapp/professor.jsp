@@ -38,6 +38,8 @@
                 <input type="submit" name="botao" value="Cadastrar" id="Cadastrar">
                 <input type="submit" name="botao" value="Alterar" id="Alterar">
                 <input type="submit" name="botao" value="Excluir" id="Excluir">
+            </div>
+            <div>
                 <input type="submit" name="botao" value="Listar" id="Listar">
             </div>
             <div class="tabela_container">

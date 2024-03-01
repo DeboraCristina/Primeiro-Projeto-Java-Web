@@ -1,6 +1,8 @@
 package com.fatec.lab_banco_de_dados.controller;
 
 import com.fatec.lab_banco_de_dados.model.Professor;
+import com.fatec.lab_banco_de_dados.persistence.GenericDAO;
+import com.fatec.lab_banco_de_dados.persistence.ProfessorDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -25,6 +27,8 @@ public class ProfessorServerlet extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
+        RequestDispatcher rd = request.getRequestDispatcher("professor.jsp");
+        rd.forward(request, response);
     }
 
     @Override
@@ -85,41 +89,43 @@ public class ProfessorServerlet extends HttpServlet
 
             RequestDispatcher rd = request.getRequestDispatcher("professor.jsp");
             rd.forward(request, response);
-
         }
     }
 
     private void inserirProfessor(Professor p) throws SQLException, ClassNotFoundException
     {
-        System.out.println(p);
+        GenericDAO genericDAO = new GenericDAO();
+        ProfessorDAO professorDAO = new ProfessorDAO(genericDAO);
+        professorDAO.insert(p);
     }
 
     private void altualizarProfessor(Professor p) throws SQLException, ClassNotFoundException
     {
-        System.out.println(p);
+        GenericDAO genericDAO = new GenericDAO();
+        ProfessorDAO professorDAO = new ProfessorDAO(genericDAO);
+        professorDAO.update(p);
     }
 
     private void deletarProfessor(Professor p) throws SQLException, ClassNotFoundException
     {
-        System.out.println(p.getCodigo());
+        GenericDAO genericDAO = new GenericDAO();
+        ProfessorDAO professorDAO = new ProfessorDAO(genericDAO);
+        professorDAO.delete(p);
     }
 
     private Professor buscarProfessor(Professor p) throws SQLException, ClassNotFoundException
     {
-        p.setNome("Fulanno");
-        p.setTitulacao("Mestre");
+        GenericDAO genericDAO = new GenericDAO();
+        ProfessorDAO professorDAO = new ProfessorDAO(genericDAO);
+        p = professorDAO.find(p);
         return p;
     }
 
     private List<Professor> listarProfessor() throws SQLException, ClassNotFoundException
     {
-        List<Professor> professores = new ArrayList<>();
-        Professor p1 = new Professor(10, "Beltrano", "Mestre");
-        Professor p2 = new Professor(10, "Cicrano", "Mestre");
-        Professor p3 = new Professor(10, "Marcio", "Mestre");
-        professores.add(p1);
-        professores.add(p2);
-        professores.add(p3);
+        GenericDAO genericDAO = new GenericDAO();
+        ProfessorDAO professorDAO = new ProfessorDAO(genericDAO);
+        List<Professor> professores = professorDAO.list();
         return professores;
     }
 }

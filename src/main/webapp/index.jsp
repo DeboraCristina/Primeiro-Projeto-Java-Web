@@ -20,7 +20,7 @@
         <p>Projeto pra matéria de Laboratório de Banco de Dados.</p>
         <br>
         <br>
-        <p class="erro">Esse projeto ainda não tem banco de dados integrado!!</p>
+        <p>Agora esse projeto tem Banco de Dados integrados :)</p>
     </main>
 </body>
 </html>
